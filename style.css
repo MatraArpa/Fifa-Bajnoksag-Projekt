@@ -1,0 +1,104 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  overflow: auto;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+}
+
+label {
+  font-size: 16px;
+  color: #555555;
+  display: block;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#statsContainer {
+  margin-top: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+#playerName {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stats p {
+  flex: 1 1 45%;
+  font-size: 14px;
+  color: #666666;
+  margin: 5px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  font-size: 14px;
+  color: #555555;
+}
+
+th {
+  background-color: #f9f9f9;
+}
+
+
+tr:hover {
+  filter: brightness(95%);
+}
+
+.win {
+  background-color: #d4edda;
+}
+
+.loss {
+  background-color: #f8d7da;
+}
+
+.draw {
+  background-color: #fff3cd;
+}

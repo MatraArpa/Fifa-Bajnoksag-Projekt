@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Játékos Statisztikák</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Játékos Statisztikák</h1>
+        <label for="playerSelect">Válassz játékost:</label>
+        <select id="playerSelect">
+            <option value="">--Válassz--</option>
+        </select>
+
+        <div id="statsContainer" style="display:none;">
+            <h2 id="playerName"></h2>
+            <h3>Statisztikák</h3>
+            <div class="stats">
+                <p><strong>Összes lejátszott meccs:</strong> <span id="totalMatches"></span></p>
+                <p><strong>Győzelmek:</strong> <span id="wins"></span></p>
+                <p><strong>Vereségek:</strong> <span id="losses"></span></p>
+                <p><strong>Döntetlenek:</strong> <span id="draws"></span></p>
+                <p><strong>Gólkülönbség:</strong> <span id="goalDifference"></span></p>
+                <p><strong>ELO:</strong> <span id="eloGained"></span></p>
+            </div>
+            <h3>ELO Változás</h3>
+            <canvas id="eloChart" width="400" height="200"></canvas>
+            <h3>Összes meccs:</h3>
+            <table id="matchesTable">
+                <thead>
+                    <tr>
+                        <th>Hazai játékos</th>
+                        <th>Vendég játékos</th>
+                        <th>Hazai gól</th>
+                        <th>Vendég gól</th>
+                        <th>Bajnoki / Playoff</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
