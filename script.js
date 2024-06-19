@@ -1,16 +1,16 @@
-let chart; // Declare a variable to hold the chart instance
+let chart; 
 
 function processCsvData(data) {
     const playerStats = {};
-    const eloColumns = Object.keys(data[0]).slice(10); // Adjust as needed based on your data structure
+    const eloColumns = Object.keys(data[0]).slice(10); 
     const elos = {};
 
-    // Initialize ELO arrays for each player
+    // ELOk inicializálása minden játékos számára
     eloColumns.forEach(col => {
         elos[col] = [];
     });
 
-    // Extract ELO ratings for each player from each row and only save if it has changed
+    // Az egyes játékosok ELO-értékelésének kivonása minden sorból, és csak akkor menti el, ha az megváltozott.
     data.forEach(row => {
         eloColumns.forEach(col => {
             if (row[col] !== null && row[col] !== undefined) {
@@ -83,7 +83,7 @@ function processCsvData(data) {
 function createChart(playerName, playerStats) {
     const ctx = document.getElementById('eloChart').getContext('2d');
 
-    // Destroy the existing chart instance if it exists
+    // Ha van meglevo diagrammok megszüntetése ha van
     if (chart) {
         chart.destroy();
     }
